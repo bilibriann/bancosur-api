@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: bancosur-db
+    environment:
+      POSTGRES_DB: bancosur
+      POSTGRES_USER: bancosur
+      POSTGRES_PASSWORD: bancosur123
+    ports:
+      - "5432:5432"
+    volumes:
+      - bancosur_data:/var/lib/postgresql/data
+
+volumes:
+  bancosur_data:
